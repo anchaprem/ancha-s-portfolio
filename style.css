@@ -1,0 +1,776 @@
+@charset "UTF-8";:root {
+  --backgroundcolor:#D3D3D3!important;
+  --maintextcolor:#008080!important;
+  --textcolor: #000000!important;
+
+    --navbar-color: #CCCCCC!important;
+    --nav-contact-bc:#454e56!important;
+}
+
+*{
+    box-sizing: border-box;
+}
+.About,.Accomplishments,.portfolio,.contact-me .row{
+  max-width: 100%;
+}
+body{
+    background-color:var(--backgroundcolor) !important;
+      font-family: "Anta", sans-serif !important;
+    }
+
+.container{
+    height:calc(100vh-80px);
+    padding-bottom: 80px; /* Adjust the padding-bottom to match the navbar height */
+    box-sizing: border-box; /* Ensure padding is included in the height calculation */
+    overflow-y: auto;
+}
+
+
+/*-----------------Start-of Home Section------*/
+
+/*start of profileanimations */
+.header{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+ /* .img-div {
+    width: 10rem;
+    height: 10rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #0000004d;
+    transition: transform .3s ease-in-out;
+    background-color: #4a62d6;
+    position: absolute; 
+} */
+
+.img-div {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #0000004d;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    t
+    transform: translate(-50%, -50%); /* Center the element */
+
+}
+
+img{   
+    height  : 100%; 
+    width   : 100%;
+    border-radius: 50%;
+}
+
+.img-div:hover {
+    transform: scale(1.05)
+} 
+/*github: anchaprem*/
+.circle {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    border: 1px solid var(--maintextcolor);
+    position: relative;
+    animation: CircleRo 20s linear infinite;
+
+}
+
+@keyframes CircleRo {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.circle span {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    position: absolute;
+    box-shadow: 0 0 10px #0000004d
+}
+
+.circle span:hover {
+    background-color:var(--maintextcolor);
+    color: #fff;
+}
+
+.circle span:nth-child(1) {
+    left: calc(50% -2rem);
+    top: 1rem
+}
+
+.circle span:nth-child(2) {
+    top: calc(50% -2rem);
+    right: 1rem
+}
+
+.circle span:nth-child(3) {
+    bottom: calc(10% - 2rem);
+    right: 1rem
+}
+
+.circle span:nth-child(4) {
+    left: calc(50% -2rem);
+    bottom: 1rem
+}
+/*end of profileanimations*/
+
+
+/*start of nav bar*/  
+.nav {
+    position: fixed;
+    padding: 20px;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0
+}
+
+.nav__menu {
+    width: 100%
+}
+
+.list__icons {
+    padding: 1rem;
+    cursor: pointer;
+    background-color:var(--nav-contact-bc);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: .7rem 0;
+    -webkit-box-shadow: 0 3px 15px rgba(0,0,0,.3);
+    box-shadow: 0 3px 15px #0000004d;
+    color: #fff!important;
+}
+
+.active-nav .list__icons {
+    background-color:var(--maintextcolor);
+}
+/*end of nav var*/
+
+/*github: anchaprem*/
+/*content of home*/
+.name-heading h1{
+  color: var(--maintextcolor);
+}
+
+.tag-name h2{
+  color: var(--maintextcolor);
+}
+
+.home-info-text{
+  color: var(--textcolor);
+}
+
+/*end of content of home*/
+
+
+/*start of download button*/
+.btn-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    padding-bottom: 100px;
+    z-index: 900;
+}
+
+.download-button a:hover {
+    background-color:var(--maintextcolor);
+    transition: all 1s ease-in-out;
+}
+
+.main-btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--maintextcolor)!important;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--textcolor);
+}
+
+.main-btn .btn-text {
+    padding: 0 1rem;
+}
+
+.main-btn .btn-icon {
+    background-color:var(--maintextcolor)!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+    fill: black !important;
+}
+
+.main-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0; /* Initially hidden */
+    height: 100%;
+    background-color: var(--maintextcolor);
+    transition: width 0.4s ease-out; /* Transition for width */
+    z-index: -1;
+}
+
+.main-btn:hover::before {
+    width: 100%; /* Fully visible on hover */
+}
+
+/*end of download button*/
+
+/*---------End-----------Of-----------Home Section----------------------------------------------------*/
+
+/*github: anchaprem*/
+
+/*---------Start-----Of-------------About Us Section-------------------------------------------------*/
+.about-section h1{
+  color: var(--maintextcolor);
+}
+
+.about-me-data{
+  color: var(--textcolor);
+}
+
+.about-item:hover {
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  border: 1px solid var(--maintextcolor);
+  -webkit-box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+  box-shadow: 5px 4px 15px #00000052;
+}
+
+.col-5 .text-div  {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+.about-item {
+  border: 1px solid var(--maintextcolor);
+  border-radius: 5px;
+  transition: all .4s ease-in-out;
+  -webkit-box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+  box-shadow: 1px 2px 15px #0000001a;
+  margin: 0 10px;
+  min-height: 150px;
+  background-color: #fff;
+}
+.about-item .text-div {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.about-item .text-div .large-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color:var(--maintextcolor);
+}
+.about-item .text-div .small-text{
+  color: var(--textcolor);
+}
+
+/*My skills Section*/
+.skills-heading{
+  color: var(--maintextcolor);
+}
+.skill-sections .item_label{
+  color: var(--textcolor);
+}
+.text-uppercase .progress{
+  stroke:var(--maintextcolor)
+}
+.skill-sections .item_bar{
+  position: relative;
+  border-radius: 4px;
+}
+/*github: anchaprem*/
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color:var(--maintextcolor) !important;
+  border-radius: 4px;
+  height: 10px !important;
+}
+
+/*end of skill section*/
+
+/*github: anchaprem*/
+
+/* start of Time Line */
+  
+  /** timeline box structure **/
+ .timeline-sections h1{
+  color: var(--maintextcolor);
+ }
+  .timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+  }
+  
+  .timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: var(--maintextcolor);
+    left: 50%;
+    margin-left: -1.5px;
+  }
+  
+  .tldate {
+    display: block;
+    width: 200px;
+    background:var(--nav-contact-bc);
+    color: white;
+    margin: 0 auto;
+    padding: 3px 0;
+    font-weight: bold;
+    text-align: center;
+    -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
+  }
+  
+  .timeline li {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+.timeline-panel:hover{
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-10px);
+  -webkit-box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+  box-shadow: 5px 4px 15px #00000052;
+} 
+
+  .timeline li:before, .timeline li:after {
+    content: " ";
+    display: table;
+  }
+
+  .timeline li:after {
+    clear: both;
+  }
+
+  .timeline li:before, .timeline li:after {
+    content: " ";
+    display: table;
+  }
+  
+  /** timeline panels **/
+  .timeline li .timeline-panel {
+    width: 46%;
+    float: left;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    padding: 20px;
+    position: relative;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  /** panel arrows **/
+  .timeline li .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+  }
+  
+  .timeline li .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+  }
+  .timeline li .timeline-panel.noarrow:before, .timeline li .timeline-panel.noarrow:after {
+    top:0;
+    right:0;
+    display: none;
+    border: 0;
+  }
+  
+  .timeline li.timeline-inverted .timeline-panel {
+    float: right;
+  }
+  
+  .timeline li.timeline-inverted .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  
+  .timeline li.timeline-inverted .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  
+  
+  /** timeline circle icons **/
+  .timeline li .tl-circ {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    text-align: center;
+    background: var(--maintextcolor);
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: -16px;
+    border: 3px solid #90acc7;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  
+  
+  /** timeline content **/
+  
+  .tl-heading h4 {
+    margin: 0;
+    color: var(--maintextcolor);
+  }
+  
+.tl-body{
+  color: var(--textcolor);
+}
+
+  .tl-body p, .tl-body ul {
+    margin-bottom: 0;
+  }
+  
+  .tl-body > p + p {
+    margin-top: 5px;
+  }
+/*----------------end of Time Line----------------*/
+
+/*github: anchaprem*/
+
+/*-------------my-portfolio--------------------*/
+.portfolio h1{
+  color: var(--maintextcolor);
+}
+
+.portfolio p{
+  color: var(--textcolor);
+}
+
+.portfolio-item {
+    position: relative;
+    border: 1px solid  #ddd;
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+  }
+
+  .portfolio-item img {
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+  }
+  .portfolio-item:hover .hover-items {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.portfolio-item .hover-items {
+    width: 100%;
+    height: 200px;
+    background-color:var(--maintextcolor);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    padding: 0 10px;
+}
+.portfolio-item .hover-items .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+}
+.portfolio-item .hover-items .icons .icon {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 1rem;
+    cursor: pointer;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #000;
+}
+/*-------End of my-portfolio---------*/
+
+
+
+/*--------------------------Start of Accomplishments_____________*/
+
+/*-----certificates Earned---*/
+.Accomplishments h1,
+.Accomplishments h2,
+.Accomplishments h5{
+  color: var(--maintextcolor);
+}
+.Accomplishments h3{
+color: #454e56;
+}
+.certifications-intro{
+color: var(--textcolor);
+}
+.Accomplishments  .card-text{
+  color: var(--textcolor);
+}
+
+
+.card:hover{
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+  box-shadow: 5px 4px 15px #00000052;
+}
+
+.card img{
+  border-radius: 0px;
+  height:200px;
+}
+
+/*github: anchaprem*/
+
+/*link button in cards*/
+.card-body a{
+  background-color:var(--maintextcolor);
+  color:white;
+}
+
+.card-body a:hover{
+  background-color: var(--maintextcolor);
+  color:white;
+}
+/*link button in cards*/
+
+/*-----------End of accompllishment section---------------*/
+
+/*---  ---------start of -------Contact me-----------*/
+#contactme h1{
+color: var(--maintextcolor);
+}
+.contact-me-info{
+color:var(--textcolor);
+}
+#contactme .info h4,span{
+  color: var(--textcolor);
+}
+
+.contact-detail .icon {
+  background-color:var(--maintextcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+.contact-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-icon a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  background-color: #454e56;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.contact-detail .icon{
+  width: 50px;
+  height: 50px;
+}
+.contact-icon a:hover{
+  color: white;
+  background-color:var(--maintextcolor) !important;
+}
+
+/*github: anchaprem*/
+
+
+/*Form to contact*---*/
+.form-contact input,textarea {
+    background-color: white;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+button, input,textarea{
+  border: none;
+}
+
+.form-contact input:hover{
+  border: 1px dashed #c25b4e;
+}
+
+.form-contact  textarea:hover{
+  border: 2px dashed #c25b4e;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+  border-collapse: collapse;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  padding: 5px 10px;
+} 
+
+.submit-btn:hover{
+  opacity: 1;
+  background-color: var(--maintextcolor);
+  color: white;
+}
+/*-----end of contact button--------*/
+
+/*-----------First letter's*-------------*/
+.contact p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+.portfolio p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+.certifications-intro::first-letter{
+  font-size: 200%;
+  font-weight: bold;
+}
+
+
+.skill-sections .item_bar{
+  position: relative;
+  border-radius: 4px;
+}
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+background-color:var(--maintextcolor) !important;
+transition: all 2s linear;
+border-radius: 4px;
+height: 10px !important;
+}
+
+
+
+/*github: anchaprem*/

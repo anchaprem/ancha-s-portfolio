@@ -1,0 +1,147 @@
+@charset "UTF-8";:root {
+  --backgroundcolor:#D3D3D3!important;
+  --maintextcolor:#008080!important;
+  --textcolor: #000000!important;
+
+    --navbar-color: #CCCCCC!important;
+    --nav-contact-bc:#454e56!important;
+}
+@media (max-width: 1014px) {
+    .nav {
+        position:fixed;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
+        height:15%;
+        background-color:var(--backgroundcolor);
+        transition: all 1s ease-in-out;
+        z-index: 9999;
+    }
+    .nav__list {
+        display: flex;
+        padding: 0 2px;
+        justify-content: space-evenly;
+        margin: 0
+    }
+    .name-heading{
+        margin-top: 30% !important;
+    }
+/*github: anchaprem*/
+}
+@media (min-width: 768px){
+    .name-heading{
+        margin-top:-3rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px){
+    .header {
+        display: block;
+        justify-content: initial;
+        align-items: initial;
+      }
+      .circle{
+        margin:15% 0px 0px 10%;
+      }
+      .img-div{
+        position: relative;
+        top:-198px;
+        left:-14px;
+
+        
+      }
+}
+
+@media (min-width: 992px) and (max-width:1014px){
+    .header {
+        display: block;
+        justify-content: initial;
+        align-items: initial;
+      }
+      .circle{
+        margin:10% 0px 0px 20%;
+      }
+      .img-div{
+        position: relative;
+        top:-200px;
+        left:-18px
+      }
+}
+
+/*Time line Media quries*/
+@media (max-width: 991px) {
+  .timeline li .timeline-panel {
+    width: 44%;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-header h1 { font-size: 1.8em; }
+  
+  ul.timeline:before {
+    left: 40px;
+  }
+  
+  .tldate { width: 140px; }
+
+  ul.timeline li .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+  }
+
+  ul.timeline li .tl-circ {
+    top: 22px;
+    left: 22px;
+    margin-left: 0;
+
+  }
+  ul.timeline > li > .tldate {
+    margin: 0;
+  }
+
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+
+  ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+}
+/*end of Time line media quries*//*github: anchaprem*/
+
+@media (min-width:1015px){/*github: anchaprem*/
+  .circle {
+    height: 20rem;
+    width: 20rem;
+  }
+  .img-div {
+    width: 13rem;
+    height:13rem;
+  }
+  .circle span {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+/*----About*//*github: anchaprem*/
+@media (min-width:550px) and (max-width:768px) {
+  .circle {
+    height: 18rem;
+    width: 18rem;
+  }
+  .circle span {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
